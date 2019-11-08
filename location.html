@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location</title>
+    <link rel ="stylesheet" href="laostyle.css">
+<style>
+        body{
+            
+            font-family: 'Megrim', cursive;
+            background-color: antiquewhite;
+        }
+        </style>
+</head>
+<body>
+        <div class = "banner">
+                <img  class = "banimg" src="image for lab5/b1new.jpg" weight="800" height="190" alt="b1">
+        </div>
+        <center><h1>location</h1>
+        
+    
+        
+            <ul>
+                <div class="menu">
+                                 
+                <li><a href = "#a"><img src="image for lab5/aflag.jpg" alt ="image of aflag" width="70" height=70></a></li> 
+                <li><a href = "#b"><img src="image for lab5/wfalg.jpg" width="70" height=70></a></li>
+     
+                
+                <li><a href = "#c"><img src="image for lab5/hfalg.jpg" alt ="image of hflag" width="65" height=65></a></li>
+                        <div class="dropdown">
+                        <li><a href = "#"><img src="image for lab5/home3.png" alt ="image of home" width="70" height=70></a></li> 
+                        <div class="dropdown-content">
+                                <li><a href=http://yuhaolao.vps.cs.uri.edu/hero.html>hero introdction</a></li>
+                                <li><a href="http://yuhaolao.vps.cs.uri.edu/home.html">Home</a></li>
+    
+    
+    
+                </div>
+            </div>
+        </div>
+       
+           
+            </ul>
+        </center>
+<button id="btn" style= "width:170px; height: 50px;  color:green;">hide the picture</button>
+<h3>
+    <p><img id = a src="image for lab5/location1.jpg" alt="l1" ></p>
+    <p><img src="image for lab5/location2.jpg" alt="l2" ></p>
+    <p><img src="image for lab5/location3.jpg" alt="l3" ></p>
+    <p><img id =b src="image for lab5/location4.jpg" alt="l4" ></p>
+    <p><img id=c src="image for lab5/location6.jpg" alt="l5" ></p>
+</h3>
+    <ol>
+
+            <li>STARK company</li>
+            
+            <li>Avenger base</li>
+            <li>Asgard</li>
+            
+            <li>Wakanda</li>
+            <li>HONG KONG</li>
+
+
+
+        </ol>
+        
+       
+</body>
+
+<script >
+        
+  window.onload=function(){
+       var btn=document.getElementById("btn");
+       var img=document.getElementsByTagName("h3")[0];
+        btn.onclick=function(){
+
+            if (btn.innerText==="hide the picture"){
+                img.style.display="none";
+                btn.innerText="show the picturre";
+            
+            }
+            else{
+                img.style.display="block";
+                btn.innerText="hide the picture ";
+            }
+        }
+
+   }
+    
+    
+
+</script>
+
+</html>

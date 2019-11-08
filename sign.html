@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel ="stylesheet" href="laostyle.css">
+    <link rel ="stylesheet" href="qqstyle.css">
+    <title>sign</title>
+        <style>
+    .gray_input{color:#878787;}
+    .gray_input2{color:#444;}
+    
+        
+    .invalid { border-color: red; }
+    #error { color: red }
+
+    </style>
+</head>
+
+
+<body style="background-color:antiquewhite;">
+        <center>
+    <div class = "banner">
+        <img  class = "banimg" src="image for lab5/b1new.jpg" weight="800" height="190" alt="b1">
+    </div>
+
+        <ul>
+        <div class ="menu">
+                    
+                       
+                <li><a href = "http://yuhaolao.vps.cs.uri.edu/home.html"><img src="image for lab5/home3.png" alt ="image of reward" width="70" height=70></a></li> 
+            <li><a href = "http://yuhaolao.vps.cs.uri.edu/reward.html"><img src="image for lab5/reward.png" alt ="image of reward" width="70" height=70></a></li>
+ 
+            
+            <li><a href = "http://yuhaolao.vps.cs.uri.edu/call.html"><img src="image for lab5/call3.jpg" alt ="image of call" width="65" height=65></a></li>
+            
+            <div class="dropdown">
+           <li><a href = "#"><img src="image for lab5/hero.png" alt ="image of hero" width="75" height=75></a></li> 
+            <div class="dropdown-content">
+                    <li><a href="http://yuhaolao.vps.cs.uri.edu/hero.html">hero introdction</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://yuhaolao.vps.cs.uri.edu/location.html">Location</a></li>
+                    
+                    
+                
+                
+            
+</div>       
+                              
+</div>
+
+</div>
+
+</ul>
+
+</center>
+
+<hr width="90%" color="green">
+<center><h2>join us !</h2>
+<form action="demo_form.asp" method="get">
+            First name:<br>
+            <input name="text2" type="text" id="main_search3" class="gray_input" value="Name Reuired"/>
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname">
+            <br>
+            current career:<br>
+            <input type="text" name="job">
+            <br>
+            why you want to be a hero?<br>
+            <input type="text" name="why">
+            <br>
+            skill:<br>
+            <input type="text" name="skill">
+            <br>
+
+
+            </form>
+            <br>
+            <br>
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm();" method="post">
+                        Email: <input type="text" name="email" id="input" required>
+                        <div id="error"></div>
+
+                        <input type="submit" value="submit">
+
+            </form>    
+
+<p>call->123456789</p>
+<p>e-mail-><a href = "mailto: yuhao_lao@my.uri.edu"><img src="image for lab5/gmail.ico" alt ="image of email"   width="30" height=30></a></p>
+
+<hr width=90% color="green">
+
+</center>
+
+</body>
+
+<script>
+    function addLoadEvent(func){
+     var oldonload = window.onload;
+     if(typeof window.onload!= 'function' ){
+       window.onload = func;
+     }
+     else{
+      window.onload = function(){
+      oldonload();
+      func();
+      }
+     }
+    }
+    var inputtext = function(){
+     var inputs = document.getElementsByTagName('INPUT');
+     for(var i=0; i<inputs.length; i++){
+      var str = "gray_input";
+      if(str.indexOf(inputs[i].className)==-1) continue;
+      var element = inputs[i];
+      element.onfocus = function() {
+         if (this.value == this.defaultValue) {
+            this.value = "";
+         this.className = "gray_input2";
+        }
+         }
+           element.onblur = function() {
+           if (this.value == "") {
+              this.value = this.defaultValue;
+         this.className = "gray_input";
+              }
+            }
+     }
+    }
+     
+    addLoadEvent(inputtext);
+    
+    function validateForm(){
+	var x=document.forms["myForm"]["email"].value;
+	var atpos=x.indexOf("@");
+	var dotpos=x.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+                error.innerHTML = 'Please enter a correct email.'
+                input.classList.add('invalid');
+                alert("Not a valid E-mail address");
+               
+  		return false;
+        }
+        
+}
+    </script>
+</html>
